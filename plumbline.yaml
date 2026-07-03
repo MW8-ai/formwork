@@ -1,0 +1,5 @@
+project_type: api
+add_gates: [iac_scan]      # requires plumbline-patch/iac_gates.py merged into Plumbline
+skip_gates: [tests_present] # IaC repo; validation is compile + checkov, not pytest
+llm:
+  enabled: false
