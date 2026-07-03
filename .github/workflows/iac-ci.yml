@@ -1,0 +1,54 @@
+# Formwork CI: compile-validate Bicep, validate Terraform, scan with checkov,
+# then run the shared Plumbline governance gates. Least-privilege throughout.
+name: iac-ci
+on:
+  push: { branches: [main] }
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  bicep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4   # pin to SHA before release; zizmor will nag until you do
+      - name: Bicep build (compile check)
+        run: |
+          az bicep install
+          for f in $(find . -name "*.bicep"); do
+            echo "== $f"; az bicep build --file "$f" --stdout > /dev/null
+          done
+
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with: { terraform_version: "1.9.8" }
+      - name: fmt + validate
+        working-directory: infra/terraform
+        run: |
+          terraform fmt -check -recursive
+          terraform init -backend=false
+          terraform validate
+
+  checkov:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkov scan (Bicep via ARM + Terraform)
+        run: |
+          pip install checkov
+          # Compile bicep to ARM so checkov's arm framework can scan it
+          az bicep install
+          mkdir -p .build
+          for f in $(find . -name "*.bicep"); do
+            az bicep build --file "$f" --outfile ".build/$(basename ${f%.bicep}).json"
+          done
+          checkov -d infra/terraform --framework terraform --compact
+          checkov -d .build --framework arm --compact
+
+  plumbline:
+    uses: MW8-ai/plumbline/.github/workflows/plumbline.yml@main
+    with: { llm_review: false }
