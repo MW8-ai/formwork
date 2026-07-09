@@ -1,0 +1,19 @@
+# Secrets & state — the reason this file exists
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.tfvars
+!*.tfvars.example
+*.tfstate
+*.tfstate.*
+.terraform/
+bin/
+*.bicepparam.local
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
