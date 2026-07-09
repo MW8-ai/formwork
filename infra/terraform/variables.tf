@@ -24,8 +24,8 @@ variable "disable_local_auth" {
 
 variable "public_network_enabled" {
   type        = bool
-  default     = true
-  description = "Enabled for personal showcase; false + private endpoints for work/GCC."
+  default     = false
+  description = "Defaults to disabled (secure by default) -- this is a template other projects inherit, not just a personal showcase. Opt in explicitly with -var public_network_enabled=true when you want public access (e.g. a demo); use private endpoints for work/GCC regardless."
 }
 
 variable "model_deployments" {

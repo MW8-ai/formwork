@@ -13,8 +13,8 @@ param location string = resourceGroup().location
 @description('Entra-only auth. Keep true. Local keys are a standing credential risk.')
 param disableLocalAuth bool = true
 
-@description('Public network access. Enabled for personal showcase; set false + private endpoints for work/GCC.')
-param publicNetworkEnabled bool = true
+@description('Public network access. Defaults to Disabled (secure by default) -- this is a template other projects inherit, not just a personal showcase. Opt in explicitly with -p publicNetworkEnabled=true when you want public access (e.g. a demo); use private endpoints for work/GCC regardless.')
+param publicNetworkEnabled bool = false
 
 @description('Model deployments. Each: { name, format, version, skuName, capacity }.')
 param modelDeployments array = []
