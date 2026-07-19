@@ -59,3 +59,16 @@ landing-zone deployments, Microsoft's AVM pattern module
 ## License
 
 MIT
+
+<!-- cornerstone-method:start -->
+
+---
+
+## Part of the Cornerstone Method
+
+**Know → Define → Assess → Shape → Verify → Visualize.** Formwork is the **Shape** verb — Bicep and Terraform templates for Azure AI Foundry, so every environment sets the same way twice.
+
+Siblings: [CloudIntelMatrix](https://github.com/MW8-ai/CloudIntelMatrix) (Know — [live matrix](https://mw8-ai.github.io/CloudIntelMatrix/)) · [Architect's Cornerstone](https://github.com/MW8-ai/architects-cornerstone) (Define) · [Architecture Review Framework](https://github.com/MW8-ai/AI-Cloud-Architect-Framework) (Assess) · [Plumbline](https://github.com/MW8-ai/plumbline) (Verify) · [Architecture Anatomy](https://github.com/MW8-ai/architecture-anatomy) (Visualize — [live atlas](https://mw8-ai.github.io/architecture-anatomy/) · [exploded 3D](https://mw8-ai.github.io/architecture-anatomy/3d-prototype.html))
+
+Method hub: [MW8-ai/cornerstone-method](https://github.com/MW8-ai/cornerstone-method)
+<!-- cornerstone-method:end -->
