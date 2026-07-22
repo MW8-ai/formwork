@@ -64,11 +64,12 @@ MIT
 
 ---
 
+<!-- CORNERSTONE-BLOCK:BEGIN (managed by cornerstone-method/scripts/stamp.py - do not edit by hand) -->
 ## Part of the Cornerstone Method
 
-**Know → Define → Assess → Shape → Verify → Visualize.** Formwork is the **Shape** verb — Bicep and Terraform templates for Azure AI Foundry, so every environment sets the same way twice.
+**Know → Define → Assess → Shape → Verify → Visualize → Record.** **Formwork** is the **Shape** verb - Bicep/Terraform template-of-templates for Azure AI Foundry. Entra-only auth at the base, honest stubs, deploy/destroy cost discipline.
 
-Siblings: [CloudIntelMatrix](https://github.com/MW8-ai/CloudIntelMatrix) (Know — [live matrix](https://mw8-ai.github.io/CloudIntelMatrix/)) · [Architect's Cornerstone](https://github.com/MW8-ai/architects-cornerstone) (Define) · [Architecture Review Framework](https://github.com/MW8-ai/AI-Cloud-Architect-Framework) (Assess) · [Plumbline](https://github.com/MW8-ai/plumbline) (Verify) · [Architecture Anatomy](https://github.com/MW8-ai/architecture-anatomy) (Visualize — [live atlas](https://mw8-ai.github.io/architecture-anatomy/) · [exploded 3D](https://mw8-ai.github.io/architecture-anatomy/3d-prototype.html))
+Siblings: [CloudIntelMatrix (Know)](https://github.com/MW8-ai/CloudIntelMatrix) ([live](https://mw8-ai.github.io/CloudIntelMatrix/)) · Architect's Cornerstone (Define) · Architecture Review Framework + Review Skill (Assess) · [Plumbline (Verify)](https://github.com/MW8-ai/plumbline) · [Architecture Anatomy (Visualize)](https://github.com/MW8-ai/architecture-anatomy) ([live](https://mw8-ai.github.io/architecture-anatomy/)) · Ledger (Record)
 
-Method hub: [MW8-ai/cornerstone-method](https://github.com/MW8-ai/cornerstone-method)
-<!-- cornerstone-method:end -->
+Hub: [The Cornerstone Method](https://github.com/MW8-ai/cornerstone-method)
+<!-- CORNERSTONE-BLOCK:END -->
